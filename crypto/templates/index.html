@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+{% block contant %}
+<html lang="en">
+<head>
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+<<<<<<< HEAD
+<title>Dailynews | Best News Aggregator Website</title>
+<meta name="description" content="Dailynews is a website provides live news of such country in your launguage and live rates status of Crypto currency in one place.">
+=======
+<title>Dailynews | Latest News</title>
+<meta name="description" content="dailynews network is a news website this website provide live news of such country and live rates status of Crypto currency.Cryptonews offers original coverage of the global blockchain and cryptocurrency news, provides opinions, reviews, guides, introduces to Crypto people with an aim to help the general public understand and successfully use these technologies now and in the future.">
+>>>>>>> 2864cb0c7aa946e04476e0666f0abffcd1060b95
+<meta name="keywords" content="dailynews, dailynewsLookup Prices ,dailynews Wall Street Journal, Top dailynews in india">
+<meta name="author" content="Navneet">
+<!--<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">-->
+<link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</head>
+<body>
+
+<div class="news blue">
+<<<<<<< HEAD
+<span class="text1"><marquee><h5>Welcome {{user.username}} in Dailynews.pythonanywhere.com</h5></marquee></span>
+
+<span class="text1" >{% if user.is_authenticated %}
+<span>Hello {{user.username}}</span>
+<span class="text1">
+=======
+{% if user.is_authenticated %}
+<span>Hello {{user.username}}</span>
+>>>>>>> 2864cb0c7aa946e04476e0666f0abffcd1060b95
+{% else %}
+<a href="{% url 'Signup'%}"><span>Please Login</span></a>
+<span class="text1">
+{% endif %}
+<<<<<<< HEAD
+
+<span><h5><a href="{% url 'Topusa_headlines' %}">Top Headlines USA</a></h5></span><span><h5><a href="{% url 'Topbcc_headlines' %}">Top Headlines from BBC News</a></h5></span><span><h5><a href="{% url 'Topgermany_headlines' %}">
+Top Business Headlines from Germany</a></h5></span><span><h5><a href="{% url 'bitcoinartical' %}"> Articles about Bitcoin</a></h5></span></span><span class="text1" ><span><h5><a href="{% url 'india' %}">India</a></h5></span><span><h5><a href="{% url 'usa' %}">USA</a></h5></span><span><h5><a href="{% url 'russia' %}">Russia</a></h5></span><span><h5><a href="{% url 'china' %}">China</a></h5></span></span>
+=======
+<span class="text1" ><span><h5><a href="{% url 'india' %}">India</a></h5></span><span><h5><a href="{% url 'usa' %}">USA</a></h5></span><span><h5><a href="{% url 'russia' %}">Russia</a></h5></span><span><h5><a href="{% url 'china' %}">China</a></h5></span><marquee><h1>Welcome To Dailynews.pythonanywhere.com</h1></marquee></span>
+>>>>>>> 2864cb0c7aa946e04476e0666f0abffcd1060b95
+</div>
+
+<span class="lang" id="google_translate_element">Read in Your Launguage</span>
+<div class="container">
+  <div class="row">
+<div class="card mb-3">
+    {% for x in index.articles %}
+  <img src="{{ x.urlToImage }}" class="card-img-top" alt="{{ x.source }}" height="350px" width="700px">
+  <div class="card-body">
+    <h3 class="card-title">{{ x.title }}</h3><hr>
+    <p class="card-text">{{ x.content }}</p>
+    <h5 class="card-text"><small class="text-muted">{{x.publishedAt}}</small></h5>
+    <a href={{ x.url }} class="btn btn-primary">Read more..</a>
+    <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-width="100" data-href={{x.url}} data-layout="button" data-action="like" data-size="large"></div>
+    <div class="fb-share-button" data-href={{ x.url }} data-layout="button_count" data-size="large"></div>
+    <a href="whatsapp://send?text={{x.title}}
+    {{x.content}}-- Read More Click this link - https://dailynews.pythonanywhere.com/" class="btn btn-success" data-width="100" data-size="large" data-href={{x.url}} target = _blank><i class="fa fa-whatsapp" style="color:white"></i></a>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+</body>
+</html>
+
+{% endblock %}

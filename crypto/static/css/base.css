@@ -1,0 +1,84 @@
+.navbar-custom {
+    background-color: #1e1e1f;
+}
+.footer{
+     position: inherit;
+     bottom: 0;
+     width: 100%;
+     background-color: #595959;
+     color: white;
+     text-align: center;
+  }
+.dropbtn {
+  background-color: #595959;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #F6CEF5;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: #595959;}
+
+.navbar-brand{
+<<<<<<< HEAD
+   font-family: 'Bungee Inline';font-size: 26px;
+}
+
+.navbar-brand:hover{
+  font-weight: 500;
+  font-size: 28px;
+=======
+   font-family: 'Bungee Inline';font-size: 24px;
+}
+
+.navbar-brand:hover{
+  background-color: #313742;
+  font-weight: 500;
+  font-size: 26px;
+>>>>>>> 2864cb0c7aa946e04476e0666f0abffcd1060b95
+}
+.navbar-nav{
+font-family: 'Bungee Inline';font-size: 13px;
+font-weight: bold;
+}
+.navbar-nav:hover{
+<<<<<<< HEAD
+font-family: 'Bungee Inline';font-size: 16px;
+=======
+font-family: 'Bungee Inline';font-size: 14px;
+>>>>>>> 2864cb0c7aa946e04476e0666f0abffcd1060b95
+font-weight: bold;
+}
+.row{
+     color: #333333;
+<<<<<<< HEAD
+font-family: "Lucida Console", Courier, monospace;
+=======
+font-family: Impact, Charcoal, sans-serif;
+>>>>>>> 2864cb0c7aa946e04476e0666f0abffcd1060b95
+}

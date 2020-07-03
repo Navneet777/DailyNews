@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block contant %}
+<!DOCTYPE html>
+<html>
+<head>
+  {% load static %}
+  <link rel='stylesheet' href="{% static 'css/account/login.css' %}">
+  <link rel='stylesheet' href="{% static 'css/account/login.js' %}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div id="logreg-forms">
+      <form  action="{% url 'signup' %} class="form-signin" " method="POST">
+        {% csrf_token %}
+          <h1 class="h3 mb-3 font-weight-normal" style="text-align: center"> Sign Up</h1>
+          <div class="social-login">
+              <button class="btn facebook-btn social-btn" type="button"><span><i class="fab fa-facebook-f"></i> Sign in with Facebook</span> </button>
+              <button class="btn google-btn social-btn" type="button"><span><i class="fab fa-google-plus-g"></i> Sign in with Google+</span> </button>
+          </div>
+          <p style="text-align:center"> OR  </p>
+          <input type="text" id="text" class="form-control" name="first_name" placeholder="First Name" required="" autofocus="">
+          <input type="text" id="text" class="form-control" name="last_name" placeholder="Last Name" required="" autofocus="">
+          <input type="email" id="inputEmail" class="form-control" name="email" placeholder="Email address" required="" autofocus="">
+          <input type="password" id="inputPassword" class="form-control" name="password" placeholder="Password" required="">
+
+          <button class="btn btn-success btn-block" type="submit"><i class="fas fa-sign-in-alt"></i> Sign Up</button>
+          <!-- <p>Don't have an account!</p>  -->
+          </form>
+
+</body>
+</html>
+{% endblock %}
